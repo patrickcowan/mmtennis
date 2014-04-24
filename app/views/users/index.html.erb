@@ -1,0 +1,15 @@
+<div class="hero-unit">
+<% provide(:title, 'All users') %>
+<h1>All users</h1>
+
+<body>
+<%= will_paginate %>
+
+<ul class="users">
+  <%= render @users %>
+</ul>
+
+<%= will_paginate %>
+</body>
+
+</div>

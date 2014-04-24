@@ -1,0 +1,19 @@
+<div class="hero-unit">
+
+<h1>Registration Summary</h1>
+
+
+	  
+		 	Event ID : <%= @event_registration.event_id %></br>
+			First Name : <%= @event_registration.first_name %></br>
+			Last Name : <%= @event_registration.last_name %></br>
+			Address : <%= @event_registration.address %></br>
+			Childs Name : <%= @event_registration.child_name %></br>
+			Childs Age : <%= @event_registration.child_age %></br>
+			Other Details: <%= @event_registration.other_details %></br>
+		
+
+<h2>thank you for your booking</h2>
+
+<%= link_to "Home", root_path, class: "btn btn-large btn-primary" %>
+</div>

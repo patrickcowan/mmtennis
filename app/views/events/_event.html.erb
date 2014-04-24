@@ -1,0 +1,20 @@
+<li>
+<table>
+
+<tr>
+	<td><%= check_box_tag "event_ids[]", event.id %></td>
+    <td><%= link_to event.title, event %></td>
+
+    <% if signed_in? && current_user.admin? %>
+    <td><%= link_to "delete", event, method: :delete %></td>
+    <%end%>
+
+
+</tr>
+</table>
+
+
+</li>
+
+
+   

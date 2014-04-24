@@ -1,0 +1,7 @@
+
+<%= form_for(@relationship) do |f| %>
+  <div class="field">
+    <%= f.text_area :address, placeholder: "Announcement..." %>
+  </div>
+  <%= f.submit "Post", class: "btn btn-large btn-primary" %>
+<% end %>

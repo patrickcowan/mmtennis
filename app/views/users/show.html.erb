@@ -1,0 +1,14 @@
+<div class="hero-unit">
+<% provide(:title, @user.name) %>
+<div class="row">
+   <div class="span8">
+    <% if @user.relationships.any? %>
+      <h3>Announcements (<%= @user.relationships.count %>)</h3>
+      <ol class="relationships">
+        <%= render @relationships %>
+      </ol>
+      <%= will_paginate @relationships %>
+    <% end %>
+</div>
+</div>
+</div>

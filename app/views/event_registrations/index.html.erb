@@ -1,0 +1,53 @@
+<div class="hero-unit">
+<h2>All bookings</h2></br>		
+<% for event in @events %>
+
+   	<h4>Event : <%=h(event.title)%> </h4>
+  	<h5> - ID:  <%=h(event.id)%></h5>
+ 
+   	<% @event_registrations.each do |event_registration| %>
+	<% if  event.id ==  event_registration.event_id%>
+	 <table>
+	  <tr>
+	   
+	  	<th>Date Booked</th>
+	    <th>Reg_id</th>
+	    <th>event Block</th>
+	    <th>Last name</th>
+	    <th>Child name</th>
+	    <th>Child age</th>
+	    <th>Other details</th>
+	    <th>User</th>
+	  </tr>
+	  
+	  
+	 <tr>
+	  
+		<td><%= event_registration.created_at.to_formatted_s(:short)  %></td>
+	 	<td><%= event_registration.id %></td>
+	    <td><%= event_registration.event.title %></td>
+	    <td><%= event_registration.first_name %></td>
+	    <td><%= event_registration.last_name %></td>
+	    <td><%= event_registration.child_name %></td>
+	    <td><%= event_registration.child_age %></td>
+	    <td><%= event_registration.other_details %></td>
+	    <td><%= event_registration.user_id %></td>
+		
+	 	 <% if can? :update, @event_registrations%>
+		    <td><%= link_to 'Show', event_registration %></td>
+	
+		    <td><%= link_to ' -Delete', event_registration, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+		<%end%>
+	     
+	  </tr>
+	
+ <%end%>
+
+	
+ <%end%>
+
+	</table>
+<%end%>
+</div>
+
+

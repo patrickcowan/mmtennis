@@ -1,0 +1,298 @@
+@import "bootstrap";
+
+/* universal */
+
+body {
+  background: url('/assets/bg.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  overflow: auto;
+}
+
+html {
+  overflow-y: scroll;
+}
+
+.columnA{
+    width: 650px;
+    text-align:justify;
+    text-justify:inter-word;
+
+}
+.columnB{
+    width: 260px;
+}
+
+section {
+  overflow: auto;
+}
+
+textarea {
+  resize: vertical;
+}
+
+.center {
+  text-align: center;
+}
+
+.center h1 {
+  margin-bottom: 10px;
+}
+
+/* typing stuff */
+
+h1, h2, h3, h4, h5, h6 {
+  line-height: 1;
+}
+
+h1 {
+  font-size: 3em;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+  color: #000;
+}
+
+h2 {
+  font-size: 1.2em;
+  letter-spacing: -1px;
+  margin-bottom: 30px;
+  text-align: center;
+  font-weight: normal;
+  color: #000;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/* header */
+
+/* sidebar */
+
+aside {
+  section {
+    padding: 10px 0;
+    border-top: 1px solid $grayLighter;
+    &:first-child {
+      border: 0;
+      padding-top: 0;
+    }
+    span {
+      display: block;
+      margin-bottom: 3px;
+      line-height: 1;
+    }
+    h1 {
+      font-size: 1.4em;
+      text-align: left;
+      letter-spacing: -1px;
+      margin-bottom: 3px;
+      margin-top: 0px;
+    }
+  }
+}
+
+
+#logo {
+  float: left;
+  margin-right: 10px;
+  font-size: 1.7em;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  line-height: 1;
+}
+
+.book
+{
+position:absolute;
+right:90px;
+}
+
+#logo:hover {
+  color: #fff;
+  text-decoration: none;
+}
+
+/* footer */
+
+footer {
+  margin-top: 20px;
+  padding-top: 5px;
+  border-top: 1px solid #eaeaea;
+  color: #000000;
+}
+
+footer a {
+  color: #000;
+}
+
+footer a:hover {
+  color: #222;
+}
+
+footer small {
+  font-size: 12px;
+  float: left;
+}
+
+footer ul {
+  font-size: 12px;
+  float: right;
+  list-style: none;
+}
+
+footer ul li {
+  float: left;
+  margin-left: 10px;
+}
+
+/*mixins, variables, etc. */
+$grayMediumLight: #eaeaea;
+
+@mixin box_sizing {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+/* miscellaneous */
+
+.debug_dump {
+  clear: both;
+  float: left;
+  width: 100%;
+  margin-top: 45px;
+  @include box_sizing;
+}
+
+/* forms */
+
+input, textarea, select, .uneditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  margin-bottom: 15px;
+  @include box_sizing;
+}
+
+input {
+  height: auto !important;
+}
+#error_explanation {
+  color: #f00;
+  ul {
+    list-style: none;
+    margin: 0 0 18px 0;
+  }
+}
+
+.boxed {
+margin-top: 175px;
+border: 1px solid black;
+background-color: #eeeeee;
+padding: 60px;
+
+}
+
+.field_with_errors {
+  @extend .control-group;
+  @extend .error;
+}
+
+.hero-unit {
+margin-top: 175px;
+padding-top: 30px;/* CHANGE PADDING HERE*/
+margin-bottom: 30px;
+padding-left: 10px;
+padding-right: 10px;
+padding-bottom: 20px;
+font-size: 15px;
+font-weight: 200;
+line-height: 30px;
+color: inherit;
+background-color: #eeeeee; /* CHANGE BACKGROUND HERE*/
+-webkit-border-radius: 6px;
+-moz-border-radius: 6px;
+border-radius: 6px;
+height: 100%;
+}
+
+
+.users {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $black;
+    &:last-child {
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+/* Events index */
+
+.events {
+  list-style: none;
+  margin: 0;
+  li {
+    overflow: auto;
+    padding: 10px 0;
+    border-top: 1px solid $black;
+    &:last-child {
+      border-bottom: 1px solid $black;
+    }
+  }
+}
+
+#footer {
+  color : #999999;
+  background: -webkit-linear-gradient(#222222, #111111);
+  background: -o-linear-gradient(#222222, #111111);
+  background: -moz-linear-gradient(#222222, #111111);
+  background: linear-gradient(#222222, #111111);
+  padding: 10px;
+  text-align: center;
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+}
+
+.relationships {
+  list-style: none;
+  margin: 10px 0 0 0;
+
+  li {
+    padding: 10px 0;
+    border-top: 1px solid #e8e8e8;
+  }
+}
+.content {
+  display: block;
+}
+.timestamp {
+  color: $grayLight;
+}
+.gravatar {
+  float: left;
+  margin-right: 10px;
+}
+aside {
+  textarea {
+    height: 100px;
+    margin-bottom: 5px;
+  }
+}
+
+table, th, td
+{
+  text-align:left;
+  padding:10px;
+}
+

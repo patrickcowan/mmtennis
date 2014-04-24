@@ -1,0 +1,20 @@
+<div class="center hero-unit">
+    <h1>Announcements</h1>
+
+    <% if signed_in? && current_user.admin? %>
+  <div class="row">
+    <aside class="span4 offset4">
+        <%= render 'shared/relationship_form' %>     
+    </aside>
+  </div>
+   <%else%>
+
+   
+   <p> put the announcements here </p>
+ <% end %>
+    <p>
+      
+    </p>
+    
+</div>
+

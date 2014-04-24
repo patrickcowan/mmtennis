@@ -1,0 +1,17 @@
+<div class="hero-unit">
+<% provide(:title, 'All Events') %>
+<h1>All Events</h1>
+
+<body>
+<%= will_paginate %>
+
+<ul class="events">
+    <%= render @events %>
+</ul>
+
+<%= will_paginate %>
+
+
+</body>
+
+</div>

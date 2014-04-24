@@ -1,0 +1,40 @@
+<div class="hero-unit">
+  <%provide(:title, "Register")%>
+
+<h1>Sign up for <%=@event.title %></h1>
+
+<div class="row">
+  <div class="span6 offset3">
+<%= form_for(@event_registration) do |f| %>
+
+ 
+    <%= f.label :first_name %>
+    <%= f.text_field :first_name, :placeholder => "Your forename"%>
+
+    <%= f.label :last_name %>
+    <%= f.text_field :last_name,  :placeholder => "Your surname" %>
+  
+    <%= f.label :address %>
+    <%= f.text_field :address,  :placeholder => "Your address here" %>
+  
+    <%= f.label :child_name %>
+    <%= f.text_field :child_name  , :placeholder => "Your child's full name here"%>
+  
+    <%= f.label :child_age %>
+    <%= f.number_field :child_age  , :placeholder => "Your child's age here"%>
+  
+    <%= f.label :other_details %>
+    <%= f.text_area :other_details  , :placeholder => "Other details you would like to add that the form does not cover....."%>
+  
+    <%= f.hidden_field :user_id %>
+    <%= f.hidden_field :event_id %>
+
+    <%= f.submit "confirm booking", class: "btn btn-large btn-primary" %>
+  </div>
+  
+  
+  
+<% end %>
+</div>
+</div>
+</div>
