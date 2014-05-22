@@ -9,12 +9,11 @@
 		 	Title:  <%= @event.title %></br>
 			Venue: <%= @event.Venue %></br>
 			Date: <%= @event.Date %></br>
-			Time: <%= @event.Time %></br>
+			Time: <%= @event.data %></br>
 			Coaches: <%= @event.coaches %></br>
+		    
 
-
-         <%= link_to "Copy Event", copy_event_path(params[:id]) %>
-		
+ 
 
 
 
@@ -22,8 +21,9 @@
 
 <%= link_to "Back", events_path, class: "btn btn-large btn-danger" %>
 <%= link_to "Place Booking ", new_event_registration_path(:event_id=> @event.id), class: "btn btn-large btn-primary" %>
-<%= link_to "Edit", events_path, class: "btn btn-large btn-success" %>
-
+ <% if signed_in? && current_user.admin? %>
+<%= link_to "Copy Event", copy_event_path(params[:id]), class: "btn btn-large btn-info" %>
+<%end%>
 
 </br></br></br></br>
 </div>

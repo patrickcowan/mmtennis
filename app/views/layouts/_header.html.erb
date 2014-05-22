@@ -19,11 +19,18 @@
     <div class="container">
       <ul class="nav pull-left">
        <li><%= link_to "Home", root_path %></li>
-          <li><%= link_to "Classes", classes_path %></li>
+       <li id="fat-menu" class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                Program <b class="caret"></b>
+              </a>
+              <ul class="dropdown-menu">
+          <li><%= link_to "Choose a Class", classes_path %></li>
+          <li><%= link_to "Weekly Program", prog_path %></li>
+        </ul>
+      </li>
           <li><%= link_to "About Us", about_path %></li>
            <li><%= link_to "Contact", contact_path %></li>
-           <li><%= link_to "Announcements", announcements_path %></li>
-            <li><a>News</a></li>
+           <li><%= link_to "Announcements", User.find(1) %></li>
         </ul>
       <nav>
         <ul class="nav pull-right">
@@ -40,8 +47,9 @@
               <ul class="dropdown-menu">
                 <% if signed_in? && current_user.admin? %>
                 <li><%= link_to "Create Event", create_path %></li>
+                <li><%= link_to "Create Announcement", announcements_path %></li>
                 <%end%>
-                <li><%= link_to "Profile", current_user %></li>
+                
                 <li><%= link_to "Settings", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li><%= link_to "Sign out", signout_path, method: "delete" %></li>

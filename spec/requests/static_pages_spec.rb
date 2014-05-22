@@ -7,7 +7,7 @@ describe "StaticPages" do
   describe "Home page" do
     before { visit root_path }
 
-    it { should have_content('Website Title') }
+    it { should have_content('Welcome to Mike Martin tennis academy') }
     it { should have_title(full_title('')) }
     it { should_not have_title('| Home') }
   end

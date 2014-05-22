@@ -1,6 +1,6 @@
 <div class="hero-unit">
 <% provide(:title, 'Create New Event') %>
-<h1>Create New Event</h1>
+<h2>Create New Event</h2>
 
 
 <div class="row">
@@ -8,19 +8,19 @@
     <%= form_for(@event) do |f| %>
 
       <%= f.label :title %>
-      <%= f.text_field :title %>
+      <%= f.text_field :title, :placeholder => "Enter the event title" %>
 
       <%= f.label :Venue %>
-      <%= f.text_field :Venue %>
+      <%= f.text_field :Venue, :placeholder => "Enter the Venue" %>
 
       <%= f.label :Date %>
-      <%= f.text_field :Date %>
+      <%= f.text_field :Date, :placeholder => "Enter the Date" %>
 
       <%= f.label :Time %>
-      <%= f.text_field :Time %>
+      <%= f.text_field :data, :placeholder => "Enter the Start Time" %>
 
       <%= f.label :Coaches %>
-      <%= f.text_field :coaches %>
+      <%= f.text_field :coaches, :placeholder => "Enter the Coaches" %>
 
       <%= f.submit "Create Event", class: "btn btn-large btn-primary" %>
     <% end %>

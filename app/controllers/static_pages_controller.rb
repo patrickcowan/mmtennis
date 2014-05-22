@@ -20,6 +20,6 @@ class StaticPagesController < ApplicationController
 
   def announcements
     @relationship = current_user.relationships.build if signed_in?
-    @feed_items = current_user.feed.paginate(page: params[:page])
+    
   end
 end

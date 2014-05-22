@@ -23,6 +23,8 @@ SampleApp::Application.routes.draw do
   match '/prog',     to: 'static_pages#prog',    via: 'get'
   match '/classes',  to: 'static_pages#classes', via: 'get'
   match '/announcements',  to: 'static_pages#announcements', via: 'get' 
+  match '/terms',    to: 'static_pages#terms', via: 'get'
+  match '/news',     to: 'static_pages#news',  via: 'get'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

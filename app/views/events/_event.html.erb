@@ -1,10 +1,12 @@
+
 <li>
 <table>
 
 <tr>
-	<td><%= check_box_tag "event_ids[]", event.id %></td>
-    <td><%= link_to event.title, event %></td>
-
+    <td><%= link_to event.title, event %>&nbsp;|</td> 
+    <td><%= link_to event.Venue, event %>&nbsp;|</td> 
+    <td><%= link_to event.Date, event %>&nbsp;|</td> 
+    <td><%= link_to event.data, event %>&nbsp;|</td> 
     <% if signed_in? && current_user.admin? %>
     <td><%= link_to "delete", event, method: :delete %></td>
     <%end%>
